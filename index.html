@@ -1,97 +1,123 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title>kezia</title>
-  
-<meta charset="utf-8">
+<head>     
+  <title></title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  
-
-<link rel="stylesheet" href="css/estilo.css">
-
-
 </head>
 
 <body>
 
-<header>
-  <h1>Kezia Souza</h1>
-</header>
-
-<nav>
-   <ul>
-     <li><a href="#">Sobre mim</a></li>
-    <br>
-     <li><a href="#">Habilidades</a></li>
-    <br>
-     <li><a href="portifólio.html">Portfólio</a></li>
-    <br>
-     <li><a href="#">Blog</a></li>
-    <br>
-     <li><a href="#">Contato</a></li>
-   </ul>  
+<div class="container-fluid">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Meu Site</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Início</a></li>
+        <li><a href="#">Sobre mim</a></li>
+        <li><a href="#">Portifólio</a></li>
+        <li><a href="#">Hbilidades</a></li> 
+        <li><a href="#">contato</a></li> 
+         
+      </ul>
+      
+            <form class="navbar-form navbar-right">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+  
 </nav>
 
-<article>
-   <h2>Sobre mim</h2>
-   <img src="https://scontent.fvix2-2.fna.fbcdn.net/v/t1.0-9/16864264_116375005554054_2700637961896823308_n.jpg?oh=3f8fb51375275383e1cf12e5a2c50a06&oe=59543C89"  width='200' heidth='200'>
- 
-  <table>
-  <tr>
-     <td><b>Nome:</b></td>
-     <td>Kezia de Jesus de Souza.</td>
- </tr>
- <tr>
-  <td><b>Idade:</b></td>
-  <td>15 anos.</td>
- </tr>
-<tr> 
-   <td><b>Natural de:</b></td>
-   <td>Serra/ES.</td>
- </tr>
- <tr>
-  <td><b>Mora em:</b></td>
-  <td>Serra.</td>
- </tr>
- </table>
- 
- 
-   
-<h3>Resdes Sociais</h3>
-   
-   
-   
- <p><a href="https://www.facebook.com/kezia.souza.3557440"><img src="https://image.freepik.com/icones-gratis/facebook-simbolo_318-37686.jpg" width='50' heidth='50' ></a></p>
-   
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/2F_fg4QrBvI" frameborder="0" allowfullscreen></iframe></center>
-  <h2>Coisas que gosto</h2>
-  <ul>
-   <h4><li>Ouvir música.</li></h4>
-   <h4><li>Tocar violão.</li></h4>
-   <h4><li>Praticar esportes.</li></h4>
-   <h4><li>Assistir filmes.</li></h4>
-  </ul>
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="https://2.bp.blogspot.com/-RNO4SX7uQ9g/U3GarVdqzaI/AAAAAAAAVsQ/TmSmke7uObE8f-P0x_-sr-TIrpN-U6sKQCPcBGAYYCw/s1600/Nova-York-Fuso-Horario-Brasil.jpg" alt="Los Angeles" style="width:100%; height: 300px;">
+       
+        <div class="carousel-caption">
+          <h3>Los Angeles</h3>
+          <p>LA is always so much fun!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHh27-TRxIVaazGg5T-cQwHJSORxEVTMQuOlM-cBQYhuv6dv02" alt="Chicago" style="width:100%; height: 300px ">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNuG7VUPs1Sl2ERZHk4yYQ182Aq3BaLlABgeti6RrEI117lGOnlw" alt="New York" style="width:100%; height: 300px">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>We love the Big Apple!</p>
+        </div>
+      </div>
   
- <h2>O que quero aprender</h2>
-  <ul>
-   <h4><li>Tocar teclado.</li></h4>
-   <h4><li>Falar inglês.</li></h4>
-   <h4><li>Programar.</li></h4>
-  </ul>  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12" ><center><h1>Músicas</h1></center></div>
+    
+  </div>
   
- </article> 
- 
- <footer>
-   <center>Kezia de Jesus de Souza</center>
- </footer>   
-   
+  <div class="row">
+    <div class="col-sm-4" ><div class="well"><iframe width="300" height="150" src="https://www.youtube.com/embed/2F_fg4QrBvI" frameborder="0" allowfullscreen></iframe></div></div>
+    
+     <div class="col-sm-4" ><div class="well"><iframe width="300" height="150" src="https://www.youtube.com/embed/2F_fg4QrBvI" frameborder="0" allowfullscreen></iframe></div></div>
+    
+    
+    <div class="col-sm-4" ><div class="well"><iframe width="300" height="150" src="https://www.youtube.com/embed/2F_fg4QrBvI" frameborder="0" allowfullscreen></iframe></div>
+  </div>
+
+
+
+
+</div>
+
+
+
+
 
 </body>
-
 </html>
-
-

@@ -1,78 +1,174 @@
 <html>
-<head>
-<title>Portifólio</title>
-   
-  
-   <meta charset="utf-8">
+<head>     
+  <title>Kezia</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-   
-<style>
-
-body {
-   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyplORJAVFINW-26Iafh1HT3WbG27w1kx_44Js8_ghMxg3wmDoaA")
-}
- header {
-   background-color:#8B795E;
-   color:white;
-   text-align:center;
-   padding:20px;
-   }
   
- nav {
-    font-family:sans-serif;
-    float:left;
-    margin:10;
-    padding:10px;
-    }
- article {
-    margin-left:140px;
-      border-left:1px solid black;
-      padding:1em;
-      
-      }
- h2 {
-    text-decoration: underline;
-    color:#1E90FF;
-    font-family:"Arial";
-    }
- footer {
-     padding:1em;
-    color:white;
-    background-color:#8B795E;
-    text-align:center;
-    }
-    
- </style>   
-    
+  <style>footer {background-color:black;}
+         body { background-color:#EEEEE0;}
+        .jumbotron{
+background-image: url(https://naveg.in/wp-content/uploads/2015/04/portfolio-navegin-dicas.jpg );
+font-family: Trebuchet MS;
+font-weight: 900;
+font-size: 1em;
+color:white;
+height: 34%;
+}
+.navbar {background-color:black;}
 
+  </style>
 </head>
+
 <body>
-   
-<div class="container">   
-   
-<h1>Portifólio</h1>
-
-<ul class="nav nav-pills nav-stacked">
-   <li><a href="index.html">Sobre mim</a></li>
-   <li><a href="#">Habilidades</a></li>
-   <li><a href="portifólio.html">Portifólio</a></li>
-   <li><a href="#">Blog</a></li>
-    <li><a href="#">Contato</a></li>
-</ul> 
-   
-
-<article>
-  <h2> Dados Gerais</h2>
-   <img src="https://scontent.fvix2-2.fna.fbcdn.net/v/t1.0-9/16864264_116375005554054_2700637961896823308_n.jpg?oh=3f8fb51375275383e1cf12e5a2c50a06&oe=59543C89"  width='200' heidth='200'>
  
-  <h3>Portifólio</h3>
-</article>
+<nav class="navbar navbar-inverse">
+  
+  <div class="container-fluid">
+  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Meu Site</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="index.htnl"><a href="#">Início</a></li>
+        <li><a href="portifólio.html">Portifólio</a></li>
+        <li><a href="#">Habilidades</a></li>
+        <li><a href="#">contato</a></li> 
+         
+      </ul>
+               
+    </div>
+  </div>
+  
+</nav>
 
-<footer>kezia</footer>
-   </div>
+  
+  <div class="jumbotron"  >
+  
+  <center><h1>Portifólio</h1></center>      
+   
+</div>
+
+  
+ 
+
+<center>
+	<h1>Calculadora</h1>
+	<br>
+	<br>
+<form>
+<!--<input class="form-control" type="text" id="tela" width='40'>-->
+<input type="text" id="tela">
+<br>
+<br>
+<button type="button" class="btn btn-primary" onclick="numero(1)">1</button>
+<button type="button" class="btn btn-primary" onclick="numero(2)">2</button>
+<button type="button" class="btn btn-primary" onclick="numero(3)">3</button>
+<button type="button" class="btn btn-danger" onclick="operacao('+')">+</button>
+
+<br>
+<br>
+<button type="button" class="btn btn-primary" onclick="numero(4)">4</button>
+<button type="button" class="btn btn-primary" onclick="numero(5)">5</button>
+<button type="button" class="btn btn-primary" onclick="numero(6)">6</button>
+<button type="button" class="btn btn-danger" onclick="operacao('-')">-</button>
+<br>
+<br>
+<button type="button" class="btn btn-primary" onclick="numero(7)">7</button>
+<button type="button" class="btn btn-primary" onclick="numero(8)">8</button>
+<button type="button" class="btn btn-primary" onclick="numero(9)">9</button>
+<button type="button" class="btn btn-danger" onclick="operacao('/')">/</button>
+<br>
+<br>
+<button type="button" class="btn btn-danger" onclick="limpar()">AC</button>
+<button type="button" class="btn btn-primary" onclick="numero(0)">0</button>
+<button type="button" class="btn btn-danger" onclick="resultado()">=</button>
+<button type="button" class="btn btn-danger" onclick="operacao('*')">x</button>
+
+
+</center>
+<script>
+
+var primeiroValor;
+var segundoValor;
+var operacaoX = "";
+
+function numero(valor){
+
+    var valorAntigo = document.getElementById('tela').value;
+    document.getElementById('tela').value = valorAntigo + valor;    
+    if (operacaoX == ''){    
+      primeiroValor =  document.getElementById('tela').value;
+    }  
+    else{
+      segundoValor =  document.getElementById('tela').value;
+    }
+
+}
+
+function operacao (valorz){
+    operacaoX = valorz;
+   
+    document.getElementById('tela').value = "";
+    
+}
+
+function resultado(){
+
+    if (operacaoX == '+'){
+        document.getElementById('tela').value = parseInt(primeiroValor) + parseInt(segundoValor);
+    }
+
+
+    if (operacaoX == '-'){
+        document.getElementById('tela').value = parseInt(primeiroValor) - parseInt(segundoValor);
+    }
+
+
+
+
+    if (operacaoX == '*'){
+        document.getElementById('tela').value = parseInt (primeiroValor) * parseInt(segundoValor);
+    }
+
+
+
+
+    if (operacaoX == '/'){
+        document.getElementById('tela').value = parseInt(primeiroValor) / parseInt(segundoValor);
+    }
+
+
+<!--}-->
+function limpar(){
+
+document.getElementById('tela').value = "";
+primeiroValor = "";
+segundoValor = "";
+operacaoX = "";
+}
+
+}
+</script>
+
+ 
+<footer>
+Kezia Souza
+<br>Informática para Internet<br>
+
+
+</footer>  
+  
+
+
+
 </body>
 </html>
